@@ -10,4 +10,4 @@ RUN wget --no-check-certificate http://github.com/phpmyadmin/phpmyadmin/archive/
 RUN tar -C /var -xvf RELEASE_4_2_8.tar.gz
 RUN mv /var/phpmyadmin-RELEASE_4_2_8 /var/www
 
-ADD config.inc.php /var/www
+ADD config.inc.php /var/www/
