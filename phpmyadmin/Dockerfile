@@ -1,4 +1,4 @@
-FROM apache2
+FROM oguzbilgic/apache2
 
 RUN apt-get install -y mysql-client
 RUN apt-get install -y php5 php5-mysql libapache2-mod-php5
