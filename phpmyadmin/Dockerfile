@@ -6,6 +6,6 @@ RUN apt-get install -y wget
 
 RUN rm -rf /var/www
 
-RUN wget --no-check-certificate http://github.com/phpmyadmin/phpmyadmin/archive/master.tar.gz
+RUN wget --no-check-certificate http://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_2_8.tar.gz
 RUN tar -C /var -xvf master.tar.gz
 RUN mv /var/phpmyadmin-master /var/www
