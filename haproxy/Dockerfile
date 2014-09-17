@@ -1,12 +1,9 @@
 FROM ubuntu:12.04
 
 # Install Haproxy.
-RUN \
-  sed -i 's/^# \(.*-backports\s\)/\1/g' /etc/apt/sources.list && \
-  apt-get update && \
-  apt-get install -y haproxy=1.5.3-1~ubuntu14.04.1 && \
-  sed -i 's/^ENABLED=.*/ENABLED=1/' /etc/default/haproxy && \
-  rm -rf /var/lib/apt/lists/*
+RUN apt-get update
+RUN apt-get install -y haproxy=1.4.18-0ubuntu1.2
+RUN sed -i 's/^ENABLED=.*/ENABLED=1/' /etc/default/haproxy
 
 # Add files.
 ADD haproxy.cfg /etc/haproxy/haproxy.cfg
